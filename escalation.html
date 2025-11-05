@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escalation Procedure - NetSaviors Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="assets/logo.jpg" alt="NetSaviors Logo" class="logo">
+                <span class="company-name">NetSaviors Technology</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support-log-form.html">Support Form</a></li>
+                <li><a href="troubleshoot.html">Troubleshooting</a></li>
+                <li><a href="escalation.html" class="active">Escalation</a></li>
+                <li><a href="assets.html">Asset Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="escalation-container">
+        <div class="escalation-header">
+            <h1>📈 Call Escalation Procedure</h1>
+            <p>Guidelines for escalating technical issues through support tiers</p>
+        </div>
+
+        <div class="escalation-info">
+            <h2>Support Tiers</h2>
+            
+            <div class="tier">
+                <h3>🟢 Tier 1: Front-line Support</h3>
+                <p><strong>NetSaviors Service Desk</strong> - Initial contact, basic troubleshooting, common issues resolution. First point of contact for all incoming support requests.</p>
+            </div>
+
+            <div class="tier">
+                <h3>🟡 Tier 2: Second-level Support</h3>
+                <p><strong>NetSaviors Specialist Teams</strong> - Complex issues, specialized knowledge, application support, server access, advanced troubleshooting.</p>
+            </div>
+
+            <div class="tier">
+                <h3>🔴 Tier 3: Third-level Support</h3>
+                <p><strong>Vendor Support & Development Teams</strong> - Software bugs, hardware failures, vendor-specific issues, code-level problems, infrastructure issues.</p>
+            </div>
+        </div>
+
+        <div class="escalation-criteria">
+            <h2>Escalation Criteria</h2>
+            
+            <div class="criteria-group">
+                <h3>🚨 Escalate to Tier 2 when:</h3>
+                <ul>
+                    <li>Issue persists after standard troubleshooting procedure</li>
+                    <li>Problem requires administrative access or server permissions</li>
+                    <li>Suspected bug in core business application</li>
+                    <li>Resolution time exceeds 15-minute target for Front-line</li>
+                    <li>Multiple users affected by the same issue</li>
+                    <li>Data corruption or loss suspected</li>
+                </ul>
+            </div>
+
+            <div class="criteria-group">
+                <h3>🚨🚨 Escalate to Tier 3 when:</h3>
+                <ul>
+                    <li>Tier 2 confirms vendor bug requiring patch or fix</li>
+                    <li>Critical hardware failure under warranty</li>
+                    <li>Vendor documentation requires escalation</li>
+                    <li>Code-level changes required</li>
+                    <li>Infrastructure or network architecture issues</li>
+                    <li>Security breaches or vulnerabilities identified</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flowchart">
+            <h2>Escalation Flowchart</h2>
+            <div class="flowchart-steps">
+                <div class="flow-step">📞 Call Received → Tier 1 Support</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">Attempt Resolution (15 min limit)</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-decision">✅ Resolved?</div>
+                <div class="flow-branches">
+                    <div class="flow-branch">
+                        <div class="flow-step">Yes → 📂 Close Ticket</div>
+                    </div>
+                    <div class="flow-branch">
+                        <div class="flow-step">No → 🔄 Escalate to Tier 2</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-step">Specialist Investigation</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-decision">✅ Resolved?</div>
+                        <div class="flow-branches">
+                            <div class="flow-branch">
+                                <div class="flow-step">Yes → 📂 Close Ticket</div>
+                            </div>
+                            <div class="flow-branch">
+                                <div class="flow-step">No → 🚀 Escalate to Tier 3</div>
+                                <div class="flow-arrow">↓</div>
+                                <div class="flow-step">Vendor Resolution</div>
+                                <div class="flow-arrow">↓</div>
+                                <div class="flow-step">✅ Solution Applied → Close</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <a href="support-log-form.html" class="btn btn-primary">Log Escalated Ticket</a>
+            <a href="troubleshoot.html" class="btn btn-secondary">Troubleshooting Guide</a>
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 NetSaviors Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

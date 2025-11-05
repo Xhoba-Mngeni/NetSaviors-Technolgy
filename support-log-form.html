@@ -1,103 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support Log - NetSaviors Technology</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Request Form - NetSaviors Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="support-form.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <img src="assets/logo.jpg" alt="NetSaviors Logo" class="logo">
-      <ul class="nav-links">
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="assets/logo.jpg" alt="NetSaviors Logo" class="logo">
+                <span class="company-name">NetSaviors Technology</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support-log-form.html" class="active">Support Form</a></li>
+                <li><a href="troubleshoot.html">Troubleshooting</a></li>
+                <li><a href="escalation.html">Escalation</a></li>
+                <li><a href="assets.html">Asset Register</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Support Log Section -->
-  <section class="contact">
-    <h2>Log a Support Ticket</h2>
-    <p>Fill in the form below and our support team will get back to you as soon as possible.</p>
+    <!-- Support Form -->
+    <main class="support-form-container">
+        <div class="form-header">
+            <h1>📋 Support Request Form</h1>
+            <p>Complete this form to log a new support ticket for GSC consultants</p>
+        </div>
 
-    <form id="supportLogForm">
-      <input type="text" id="ticketName" placeholder="Your Name" required>
-      <input type="email" id="ticketEmail" placeholder="Your Email" required>
+        <form id="supportLogForm">
+            <!-- Caller Information Section -->
+            <div class="form-section">
+                <h2 class="section-title">Caller Information</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="callerName" class="required">Caller Name</label>
+                        <input type="text" id="callerName" name="callerName" placeholder="Enter caller's full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="callerDepartment" class="required">Department</label>
+                        <select id="callerDepartment" name="callerDepartment" required>
+                            <option value="">Select Department</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="sales">Sales Department</option>
+                            <option value="sales">IT Department</option>
+                            <option value="hr">Human Resources</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactEmail" class="required">Contact Email</label>
+                        <input type="email" id="contactEmail" name="contactEmail" placeholder="caller@company.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactPhone">Contact Phone</label>
+                        <input type="tel" id="contactPhone" name="contactPhone" placeholder="+1 (555) 123-4567">
+                    </div>
+                </div>
+            </div>
 
-      <form id="supportLogForm">
-      <input type="text" id="ticketName" placeholder="Ticket Number" required>
-      <input type="text" id="ticketEmail" placeholder="Department/Team" required>
+            <!-- Incident Details Section -->
+            <div class="form-section">
+                <h2 class="section-title">Incident Details</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="incidentTitle" class="required">Incident Title</label>
+                        <input type="text" id="incidentTitle" name="incidentTitle" placeholder="Brief description of the issue" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="incidentCategory" class="required">Category</label>
+                        <select id="incidentCategory" name="incidentCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="hardware">Hardware Issue</option>
+                            <option value="software">Software Problem</option>
+                            <option value="network">Network Connectivity</option>
+                            <option value="email">Email & Communication</option>
+                            <option value="account">Account Access</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="incidentDescription" class="required">Incident Description</label>
+                        <textarea id="incidentDescription" name="incidentDescription" placeholder="Please provide detailed information about the issue, including error messages, when it started, and what you were trying to accomplish..." required></textarea>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Priority & Urgency Section -->
+            <div class="form-section">
+                <h2 class="section-title">Priority & Urgency</h2>
+                <div class="form-grid">
 
-      <select id="ticketCategory" required>
-        <option value="">Select Issue Category</option>
-        <option value="network">Network Issues</option>
-        <option value="hardware">Hardware Problems</option>
-        <option value="software">Software Errors</option>
-        <option value="security">Security Concerns</option>
-        <option value="other">Other</option>
-      </select>
+                    
+                    <div class="form-group">
+                        <label for="priority" class="required">Priority</label>
+                        <select id="priority" name="priority" required>
+                            <option value="">Select Priority</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="critical">Critical</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
-      <textarea id="ticketDescription" placeholder="Describe the issue..." rows="5" required></textarea>
+            <!-- Resolution Section (For Support Agents) -->
+            <div class="form-section">
+                <h2 class="section-title">Resolution Details</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="ticketStatus" class="required">Current Status</label>
+                        <select id="ticketStatus" name="ticketStatus" required>
+                            <option value="">Select Status</option>
+                            <option value="new">🆕 New</option>
+                            <option value="in-progress">🔄 In Progress</option>
+                            <option value="resolved">✅ Resolved</option>
+                            <option value="cancelled">❌ Cancelled</option>
+                            <option value="escalated">📈 Escalated</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="assignedAgent">Assigned Technician</label>
+                        <input type="text" id="assignedAgent" name="assignedAgent" placeholder="Agent name">
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="troubleshootingSteps">Troubleshooting Steps Taken</label>
+                        <textarea id="troubleshootingSteps" name="troubleshootingSteps" placeholder="Document the steps already taken to resolve the issue..."></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="resolutionNotes">Resolution Notes</label>
+                        <textarea id="resolutionNotes" name="resolutionNotes" placeholder="Final solution applied to resolve the issue..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="escalatedTo">Escalated To (if applicable)</label>
+                        <input type="text" id="escalatedTo" name="escalatedTo" placeholder="Team or individual">
+                    </div>
+                </div>
+            </div>
 
-      <select id="ticketPriority" required>
-        <option value="">Select Priority</option>
-        <option value="low">Low</option>
-        <option value="medium">Medium</option>
-        <option value="high">High</option>
-      </select>
+            <!-- Form Actions -->
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    🚀 Submit Support Ticket
+                </button>
+                <button type="reset" class="btn btn-reset">
+                    🗑️ Clear Form
+                </button>
+            </div>
 
-      <input type="text" id="ticketDescription" placeholder="Steps Taken" required>
-      <input type="text" id="ticketEmail" placeholder="Resolution Status" required>
-      <input type="text" id="ticketEmail" placeholder="Assigned Technician" required>
+            <p class="form-note">
+                📞 For urgent issues, please call our service desk immediately at +1 (555) 123-HELP
+            </p>
+        </form>
 
-      <button type="submit" class="btn">Submit Ticket</button>
-    </form>
+        <div id="ticketMessage" class="form-message"></div>
+    </main>
 
-    <p id="ticketMessage"></p>
-  </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 NetSaviors Technology. All Rights Reserved.</p>
+            <p>Global Sales Consultancy Support Portal</p>
+        </div>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 NetSaviors Technology. All Rights Reserved.</p>
-  </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('supportLogForm');
-      const ticketMessage = document.getElementById('ticketMessage');
-
-      function showTicketMessage(text, color = '#0ff') {
-        ticketMessage.textContent = text;
-        ticketMessage.style.color = color;
-      }
-
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-
-        const name = document.getElementById('ticketName').value.trim();
-        const email = document.getElementById('ticketEmail').value.trim();
-        const category = document.getElementById('ticketCategory').value;
-        const description = document.getElementById('ticketDescription').value.trim();
-        const priority = document.getElementById('ticketPriority').value;
-
-        if (!name || !email || !category || !description || !priority) {
-          showTicketMessage('❗ Please fill in all fields.', 'red');
-          return;
-        }
-
-        showTicketMessage('⏳ Submitting ticket...');
-        setTimeout(() => {
-          showTicketMessage('✔️ Ticket submitted successfully! Our team will contact you shortly.');
-          form.reset();
-        }, 800);
-      });
-    });
-  </script>
+    <script src="support-form.js"></script>
 </body>
 </html>

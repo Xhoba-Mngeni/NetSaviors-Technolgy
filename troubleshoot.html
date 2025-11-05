@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting Guide - NetSaviors Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .troubleshooting-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .troubleshooting-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .troubleshooting-header h1 {
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+        }
+        
+        .step {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-green);
+        }
+        
+        .step h3 {
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .step h3::before {
+            content: "🔧";
+        }
+        
+        .step ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .step li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #333;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .step li::before {
+            content: "•";
+            color: var(--accent-green);
+            position: absolute;
+            left: 0;
+        }
+        
+        .step li:last-child {
+            border-bottom: none;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="assets/logo.jpg" alt="NetSaviors Logo" class="logo">
+                <span class="company-name">NetSaviors Technology</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support-log-form.html">Support Form</a></li>
+                <li><a href="troubleshoot.html" class="active">Troubleshooting</a></li>
+                <li><a href="escalation.html">Escalation</a></li>
+                <li><a href="assets.html">Asset Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="troubleshooting-container">
+        <div class="troubleshooting-header">
+            <h1>🔧 Troubleshooting Procedure Guide</h1>
+            <p>Follow these standardized steps to efficiently resolve technical issues</p>
+        </div>
+        
+        <div class="troubleshooting-flow">
+            <div class="step">
+                <h3>Step 1: Information Gathering</h3>
+                <ul>
+                    <li>"Can you describe what you were trying to do when the problem occurred?"</li>
+                    <li>"What is the exact error message you're seeing?"</li>
+                    <li>"Which specific application or system are you using?"</li>
+                    <li>"What were you doing right before the problem started?"</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>Step 2: Identify Symptoms</h3>
+                <ul>
+                    <li>"When did you first notice this issue?"</li>
+                    <li>"Is the problem consistent or intermittent?"</li>
+                    <li>"Does it affect only you or multiple users?"</li>
+                    <li>"Can you reproduce the issue now?"</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>Step 3: Establish Theory</h3>
+                <ul>
+                    <li>"Have there been any recent changes to your system?"</li>
+                    <li>"Did you install any new software recently?"</li>
+                    <li>"Has there been a power outage or network disruption?"</li>
+                    <li>"Have you tried any solutions already?"</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>Step 4: Test Theory</h3>
+                <ul>
+                    <li>Ask user to restart the application</li>
+                    <li>Have user restart their computer</li>
+                    <li>Test on different user profile if possible</li>
+                    <li>Check network connectivity and permissions</li>
+                    <li>Verify software updates are current</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>Step 5: Resolution & Verification</h3>
+                <ul>
+                    <li>"Can you confirm the issue is now resolved?"</li>
+                    <li>"Please test all related functions"</li>
+                    <li>Ensure no secondary issues were created</li>
+                    <li>Document the solution for future reference</li>
+                    <li>Update knowledge base with resolution</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <a href="support-log-form.html" class="btn btn-primary">Log a Support Ticket</a>
+            <a href="escalation.html" class="btn btn-secondary">Escalation Procedure</a>
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 NetSaviors Technology. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
